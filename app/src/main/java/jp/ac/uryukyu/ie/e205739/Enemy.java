@@ -1,12 +1,12 @@
 package jp.ac.uryukyu.ie.e205739;
 
 /**
- * 敵クラス。
+ * 敵クラス。(これらをカプセル化した)
  *  String name; //敵の名前
  *  int hitPoint; //敵のHP
  *  int attack; //敵の攻撃力
  *  boolean dead; //敵の生死状態。true=死亡。
- * Created by tnal on 2016/11/13.
+ *  
  */
 public class Enemy {
     private String name;
@@ -54,10 +54,19 @@ public class Enemy {
             System.out.printf("モンスター%sは倒れた。\n", name);
         }
     }
+    /**
+     * カプセル化されたNameをアクセスできるようにするための関数を用意した
+     * @return
+     */
     public String getName(){
         return this.name;
     }
 
+    /**
+     * カプセル化されたDeadをアクセスできるようにするための関数を用意した。
+     * インスタンス化したEnemyに対して使う。
+     * @return
+     */
     public Boolean getDead(){
         return this.dead;
     }

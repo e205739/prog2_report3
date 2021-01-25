@@ -51,15 +51,28 @@ public class Hero {
             System.out.printf("勇者%sは道半ばで力尽きてしまった。\n", name);
         }
     }
-
+    /**
+     * カプセル化されたNameをアクセスできるようにするための関数を用意した。
+     * @return
+     */
     public String getName(){
         return this.name;
     }
-
+    
+    /**
+     * カプセル化されたDeadをアクセスできるようにするための関数を用意した。
+     * インスタンス化したHeroに対して使う。
+     * @return Dead boolean
+     */
     public boolean getDead(){
         return this.dead;
     }
 
+    /**
+     * カプセル化されたhitPointをアクセスできるようにするための関数を用意した。
+     * インスタンス化したHeroに対して使う。
+     * @return hitPoint int
+     */
     public int gethitPoint(){
         return this.hitPoint;
     }
